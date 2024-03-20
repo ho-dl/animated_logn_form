@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    
+<input style="text-align:center;width:190px;height:40px;border-radius:10px;border-width:0px;background-color:rgb(205, 194, 255);color:rgb(12, 4, 4)" type="text" id="inp" placeholder="enter your_color">
+<button style="border-radius:10px;width:90px;height:36px;background-color:orange;border-width:0px;" onclick="bgcolor()">change-bg</button>
+<hr>
+<div style="width:100%;height:130px;color:white" id="bgg">hellow</div>
+<hr>
+<div>
+
+<input type="text" id="inputone" style="width:190px;height:40px;border-radius:10px;text-align:center" placeholder="enter your value">
+
+<input type="text" id="inputtwo" style="width:190px;height:40px;border-radius:10px;text-align:center"  placeholder="enter your value">
+<br>
+
+<button onclick="calc()" style="width:90px;height:40px;border-radius:10px;text-align:center;margin-top:10px;"  >calculate</button>
+
+<p id="answer" style="background-color:grey;"></p>
+</div>
+
+<script>
+function bgcolor(){
+
+    let color = document.getElementById("inp").value;
+    document.getElementById('bgg').style.backgroundColor = color;
+}
+
+
+
+function calc(){
+
+    let valone =Number(document.getElementById("inputone").value);
+    let valtwo =Number(document.getElementById("inputtwo").value);
+    document.getElementById('answer').innerHTML = valone + valtwo;
+   
+}
+
+</script>
+
+
+
+</body>
+</html>

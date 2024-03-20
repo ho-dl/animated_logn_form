@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="fontawesome" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+
+    button{
+
+        width:100px;
+        height:35px;
+        margin-top:10px;
+        margin-bottom :10px;
+        border-radius:12px;
+        border-width: 0px;
+    }
+    #box{
+
+        border-radius:20px;
+    }
+    
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.show-btn {
+  background: #f06000;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: all 0.1s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container {
+  transform-origin: center;
+}
+.show-btn:active {
+  scale: 0.9;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.container {
+  
+
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;  
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+
+  scale: 0;
+  opacity: 0;
+  z-index: -1;
+  background: #161616;
+  width: 380px;
+  height:450px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-radius:120px;
+}
+#show:checked ~ .container {
+  scale: 1;
+  opacity: 1;
+  z-index: 11;
+}
+.container .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.container .close-btn:hover {
+  color: #3498db;
+}
+.container .text {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+.container form {
+  margin-top: -20px;
+  transition: all 0.3s ease;
+}
+.container form .data {
+  height: 45px;
+  width: 100%;
+  margin: 4px 0;
+}
+form .data label {
+  font-size: 18px;
+}
+form .data input {
+  height: 100%;
+  width: 70%;
+  padding-left: 0px;
+  font-size: 17px;
+  border: 1px solid rgb(255, 251, 4);
+}
+form .data input:focus {
+  border-color: #3498db;
+  border-bottom-width: 2px;
+}
+form .forgot-pass {
+  margin-top: -8px;
+}
+form .forgot-pass a {
+  color: #3498db;
+  text-decoration: none;
+}
+form .forgot-pass a:hover {
+  text-decoration: underline;
+}
+form .btn {
+  margin: 30px 0;
+  height: 45px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#hbutton{
+  background-image: linear-gradient(to bottom, #dfd000 0%, #ff7b00 100%);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+    color:rgb(102, 71, 3)
+}
+#hbutton:hover{
+    background-color: #2afa00;
+    color:#000000
+
+}
+
+
+  #my-text {
+
+    display: inline-block;
+    animation: slide-left 3s ease forwards;
+  }
+
+  @keyframes slide-left {
+
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+  
+      transform: translateX(-30px);
+    }
+  }
+
+
+    
+</style>
+  
+</head>
+
+
+
+
+
+
+
+<body style="background-color: #FFC81E;">
+
+
+
+  
+<!-- add this HTML element and class to apply the animation -->
+<!-- <span class="my-text">Hello</span> -->
+    
+    <div class="center">
+      <input type="checkbox" id="show" />
+      <label for="show" class="show-btn">View Form</label>
+      
+      <div class="container" id="my-text" style="margin-left:110px;">
+
+
+        <img id="pulling" src="rope.gif" style="width: 300px;height:230px; margin-left:-680px;">
+
+        
+        
+        <form action="#">
+
+          <!-- <img src="pulling.gif" style="width: 200px;height:200px; margin-right:-700px;"> -->
+
+            <div class="data" style="text-align: center;"> 
+
+                <img id="cat"  src="cat.gif" style="width:180px;height:140px;margin-top:-310px;">
+              </div>
+
+
+          <div class="data" style="margin-top:-100px;margin-bottom:20px;" >
+            
+            <input style="border-radius: 4px;text-align:center" type="text" placeholder="User-Name" required />
+          </div>
+
+
+          <div class="data">
+           
+            <input style="border-radius: 4px;text-align:center" type="password" placeholder="Password" required />
+          </div>
+
+          <div style="text-align: center;">
+
+            <button style="border-radius: px;" id="hbutton" > login </button>
+            
+          </div>
+
+          <div style="text-align: center;">
+
+            <p style="font-size: 14px;color:#757575" >forgot-password?</p>
+          </div>
+      
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
